@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Form</title>
+         <!-- Embedded styles -->
+        <style> 
+            form {
+                margin: 50px;
+                padding: 20px;
+                width: 530px;
+                height: auto;
+                background-color: #3b5c8e;
+            }
+            legend {
+                margin: 10px;
+                color: white;
+            }
+            div {
+                height: auto;
+                width: 500px;
+                background-color: #aec2e2;
+                margin: 10px;
+            }
+            .label {
+                margin: 5px;
+                width: 100px;
+                display: inline-block;
+            }
+            input, textarea {
+                margin: 5px 5px 5px 30px;
+                border: 1px solid grey;
+                width: 300px;
+            }
+            input {
+                height: 20px;
+            }
+            .textarea label {
+                display: inline-block;
+            }
+            textarea {
+                height: 80px;
+                margin-left: 142px;
+                margin-top: -22px;
+            }
+            .textarea div {
+                 width: 450px;
+            }
+            .cardType input{
+                width:10px !important;
+            }
+            .cardType {
+                width: 470px;
+            }
+            .submitButton {
+                width: 100px;
+                margin: 10px 0px 0px 200px;
+                background-color: black;
+                color: white;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 25px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="http://www.example.com/review.php" method="get">
+            <legend>Step 1: Your Details</legend>
+            <div>
+                <div class="label"><label>Name</label></div><input type="text" name="name" >
+            </div>
+            <div>
+               <div class="label"><label>Email</label></div><input type="email" name="email" >
+            </div>
+            <div>
+                <div class="label"><label>Phone</label></div><input type="phone" name="phone">
+            </div>
+             <legend>Step 1: Delivery address</legend>
+            <div class="textarea">
+                <div><label>Address</label></div><textarea name="address"></textarea>
+            </div>
+            <div>
+                <div class="label"><label>Post Code</label></div><input type="text" name="postcode" >
+            </div>
+            <div>
+               <div class="label"><label>Country</label></div><input type="text" name="country">
+            </div>
+            <legend>Step 1: Card Details</legend>
+            <div>
+                <div class="label"><label>Card Type</label></div><br>
+                <div class="cardType">
+                <input type="radio" name="Card" value="visa"><img src="visa.jpeg" height="15" width="15">VISA
+                <input type="radio" name="Card" value="amex"><img src="amex.jpeg" height="15" width="15">AmEx
+                <input type="radio" name="Card" value="mastercard"><img src="mastercard.png" height="15" width="15">Mastercard
+                </div>
+            </div>
+            <div>
+               <div class="label"><label>Card Number</label></div><input type="text" name="cardNumber" >
+            </div>
+            <div>
+                <div class="label"><label>Security Code</label></div><input type="text" name="securityCode">
+            </div>
+             <div>
+                <div class="label"><label>Name on Card</label></div><input type="text" name="nameCard">
+            </div></br>
+            <input type="submit" value="Buy it!" class="submitButton">
+        </form>
+    </body>
+</html>
